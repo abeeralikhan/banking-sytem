@@ -1,9 +1,9 @@
-from xml.etree.ElementInclude import include
-from django.urls import path, include
-from .views import index
+from django.urls import path
+from . import views
 
 # LOAN APP URLS
 
 urlpatterns = [
-    path('', index, name="loanHome")
+    path('', views.index, name="loanHome"),
+    path('/request_loan', views.request_loan, name="requestLoan")
 ]

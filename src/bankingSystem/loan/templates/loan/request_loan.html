@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- EDIT BELOW THIS -->
+
+<h1>You are viewing request loan page</h1>
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<!-- EDIT ABOVE THIS -->
+{% endblock content %}
