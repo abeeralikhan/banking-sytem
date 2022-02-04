@@ -8,4 +8,6 @@ urlpatterns = [
     path('dashboard/', dashboard, name='dashboard'),
     path('bankStatement', include('bankStatement.urls')),
     path('loan', include('loan.urls')),
+    path('beneficiary', include('beneficiary.urls')),
+    # path('fundsTransfer', include('fundsTransfer.urls')),
 ]
