@@ -6,5 +6,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="banking-system-home"),
     path('dashboard/', dashboard, name='dashboard'),
-    path('bankStatement', include('bankStatement.urls'))
+    path('bankStatement', include('bankStatement.urls')),
+    path('loan', include('loan.urls')),
 ]
