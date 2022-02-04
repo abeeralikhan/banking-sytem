@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+# FUNDS TRANSFER APP VIEWS
 
 def index(request):
     return render(request, 'fundsTransfer/index.html')

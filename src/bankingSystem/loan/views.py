@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+# LOAN APP VIEWS
 
 def index(request):
     return render(request, 'loan/index.html')

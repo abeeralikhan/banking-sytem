@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+# BENEFICIARY APP VIEWS
 
 def index(request):
     return render(request, 'beneficiary/index.html')

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 
+# BANKING SYSTEM PROJECT'S VIEWS
 def index(request):
     return redirect ('/dashboard')
 

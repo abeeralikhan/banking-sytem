@@ -2,6 +2,8 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import index, dashboard
 
+# BANKING SYSTEM PROJECT'S URLS
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="banking-system-home"),
