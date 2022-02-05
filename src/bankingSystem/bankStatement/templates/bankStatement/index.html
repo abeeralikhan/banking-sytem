@@ -2,8 +2,27 @@
 
 {% block content %}
 <!-- EDIT BELOW THIS -->
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div>
+            <input type="radio" name="radio_month" value="1" id="one_month">
+            <label for="1">1 month</label>
+            <input type="radio" name="radio_month" value="3" id="three_months">
+            <label for="3">3 month</label>
+            <input type="radio" name="radio_month" value="6" id="six_months">
+            <label for="6">6 month</label>
+            <input type="submit" value="Search">
+        </div>
+    </form>
+</div>
 
-<h1>You are viewing bank statement homepage</h1>
-
+{% if transactions %}
+    {% for transaction in transactions %}
+        <h1>{{ transaction.tr_date }}</h1>
+    {% endfor %}
+{% else %}
+    <h1>No transactions for given time period.</h1>
+{% endif %}
 <!-- EDIT ABOVE THIS -->
 {% endblock content %}
