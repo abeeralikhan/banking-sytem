@@ -6,6 +6,12 @@
 __pycache__
 db.sqlite3
 media
+src/bankingSystem/bankingSystem/__pycache__/*
+src/bankingSystem/loan/__pycache__/*
+src/bankingSystem/login/__pycache__/*
+src/bankingSystem/beneficiary/__pycache__/*
+src/bankingSystem/bankStatement/__pycache__/*
+src/bankingSystem/fundsTransfer/__pycache__/*
 
 # Backup files # 
 *.bak 
