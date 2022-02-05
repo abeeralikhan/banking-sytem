@@ -10,9 +10,8 @@ def getStartDate(n):
 
 def index(request):
     context = {}
-
-    if request=="POST":
-        transactions = TransactionDetails.objects.filter(user_id=request.user)
+    if request.method=="POST":
+        transactions = TransactionDetails.objects.filter(user_id = request.user)
         context = {'transactions':transactions}
     
     return render(request, 'bankStatement/index.html', context)

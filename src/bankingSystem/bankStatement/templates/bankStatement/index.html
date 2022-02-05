@@ -12,14 +12,16 @@
             <label for="3">3 month</label>
             <input type="radio" name="radio_month" value="6" id="six_months">
             <label for="6">6 month</label>
-            <input type="submit" value="Search">
         </div>
+        <input type="submit" value="Search">
     </form>
 </div>
 
 {% if transactions %}
     {% for transaction in transactions %}
-        <h1>{{ transaction.tr_date }}</h1>
+        <span>{{ transaction.tr_date }}</span>
+        <span>{{ transaction.description }}</span>
+        <span>{{ transaction.available_balance }}</span><br>
     {% endfor %}
 {% else %}
     <h1>No transactions for given time period.</h1>
