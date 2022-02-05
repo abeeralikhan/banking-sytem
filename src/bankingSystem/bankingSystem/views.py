@@ -5,5 +5,6 @@ def index(request):
     return redirect ('/dashboard')
 
 def dashboard(request):
-    context = {'name': 'Abeer Khan'}
+    username = request.user
+    context = {'name': username}
     return render(request, 'index.html', context)
