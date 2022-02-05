@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'beneficiary',
     'fundsTransfer',
     'loan',
+    'login',
 ]
 
 MIDDLEWARE = [
