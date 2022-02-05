@@ -6,23 +6,41 @@
     <form method="POST" action="">
         {% csrf_token %}
         <div>
-            <input type="radio" name="radio_month" value="1" id="one_month">
+            <input type="radio" name="radio_month" value="1">
             <label for="1">1 month</label>
-            <input type="radio" name="radio_month" value="3" id="three_months">
+            <input type="radio" name="radio_month" value="3">
             <label for="3">3 month</label>
-            <input type="radio" name="radio_month" value="6" id="six_months">
+            <input type="radio" name="radio_month" value="6">
             <label for="6">6 month</label>
+            <input type="submit" value="Search">
         </div>
-        <input type="submit" value="Search">
+        
     </form>
 </div>
 
 {% if transactions %}
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Transaction Date</th>
+        <th scope="col">Description</th>
+        <th scope="col">Debit</th>
+        <th scope="col">Credit</th>
+        <th scope="col">Available Balance</th>
+      </tr>
+    </thead>
+    <tbody>
     {% for transaction in transactions %}
-        <span>{{ transaction.tr_date }}</span>
-        <span>{{ transaction.description }}</span>
-        <span>{{ transaction.available_balance }}</span><br>
+        <tr>
+        <th scope="row">{{ transaction.tr_date }}</th>
+        <td>{{ transaction.description }}</td>
+        <td>{{ transaction.debit }}</td>
+        <td>{{ transaction.credit }}</td>
+        <td>{{ transaction.available_balance }}</td>
+        </tr>
     {% endfor %}
+    </tbody>
+</table>
 {% else %}
     <h1>No transactions for given time period.</h1>
 {% endif %}
