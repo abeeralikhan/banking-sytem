@@ -6,15 +6,20 @@
     <form method="POST" action="">
         {% csrf_token %}
         <div>
-            <input type="radio" name="radio_month" value="1">
+            <input type="radio" name="radio_month" value="1" checked>
             <label for="1">1 month</label>
             <input type="radio" name="radio_month" value="3">
             <label for="3">3 month</label>
             <input type="radio" name="radio_month" value="6">
             <label for="6">6 month</label>
+            <input type="radio" name="radio_month" value="True">
+            <label for="custome_date">Custom Date | </label>
+            <label for="from"> From </label>
+            <input type="date" name="startDate" value="2022-01-01">
+            <label for="to"> To </label>
+            <input type="date" name="endDate" value="2022-02-07">
             <input type="submit" value="Search">
         </div>
-        
     </form>
 </div>
 
