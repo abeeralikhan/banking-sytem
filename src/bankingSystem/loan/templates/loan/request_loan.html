@@ -7,7 +7,11 @@
 <div>
     <form method="POST" action="">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form.monthly_income }} <br>
+        {{ form.loan_type }} <br>
+        {{ form.maturity }} years <br>
+        {{ form.repayment_schedule }} <br>
+        {{ form.loan_amount }} <br>
         <input type="submit" value="Submit">
     </form>
 </div>
